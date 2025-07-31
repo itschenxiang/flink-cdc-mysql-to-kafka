@@ -15,6 +15,29 @@ MySQL 中某张表或者某些表插入数据时，需要发送消息到消息�
 1. 部署基础服务 MySQL、Kafka；
 2. 启动 Flink 集群；
 3. 编写 Flink CDC 作业 yaml 配置`mysql-to-kafka.yaml`；
+```
+source:
+   type: mysql
+   name: MySQL Source
+   hostname: 127.0.0.1
+   port: 33060
+   username: root
+   password: 123456
+   tables: test_db.\.*
+   server-id: 5401-5404
+
+sink:
+  type: kafka
+  name: Kafka Sink
+  topic: test_db_topic
+  properties.bootstrap.servers: PLAINTEXT://localhost:19094
+
+pipeline:
+  name: MySQL to Kafka Pipeline
+  parallelism: 1
+
+```
+
 4. 将一些依赖包复制到 flink cdc lib 目录下；
 ```bash
 # 仅列举手动导入的包
