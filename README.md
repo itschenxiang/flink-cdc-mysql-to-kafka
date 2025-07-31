@@ -35,7 +35,6 @@ sink:
 pipeline:
   name: MySQL to Kafka Pipeline
   parallelism: 1
-
 ```
 
 4. 将一些依赖包复制到 flink cdc lib 目录下；
@@ -61,3 +60,4 @@ flink-cdc-3.3.0/lib
 * [MySQL Connector ](https://nightlies.apache.org/flink/flink-cdc-docs-master/docs/connectors/pipeline-connectors/mysql/)
 * [mysql to kafka 官方示例](https://nightlies.apache.org/flink/flink-cdc-docs-master/docs/connectors/pipeline-connectors/kafka/)
 * [quick-start](https://nightlies.apache.org/flink/flink-cdc-docs-release-3.3/docs/deployment/standalone/)
+* [flink cdc 资源jar下载](https://github.com/apache/flink-cdc/releases)
