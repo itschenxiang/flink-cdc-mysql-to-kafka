@@ -1,0 +1,5 @@
+*.tar.gz
+*.tgz
+
+flink-1.20.2
+flink-cdc-3.3.0
